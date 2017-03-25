@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box; }
+
+.top {
+  display: inline-block;
+  background-color: #24292E;
+  color: #C3C4C6;
+  width: 100%;
+  height: 55px; }
+  .top .leftHeader {
+    padding-left: 150px; }
+    .top .leftHeader #logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-top: 10px;
+      color: white; }
+    .top .leftHeader .padding {
+      display: inline-block; }
+    .top .leftHeader .subscribe-input {
+      width: 300px;
+      background: transparent;
+      border-radius: 3px;
+      height: 35px; }
+    .top .leftHeader h5 {
+      display: inline; }
+    .top .leftHeader .smalltext {
+      padding-left: 20px; }
+  .top .rightHeader {
+    text-align: right;
+    padding-top: 10px;
+    padding-right: 230px; }
+    .top .rightHeader .headshot {
+      width: 30px;
+      height: 30px;
+      border-radius: 3px; }
+    .top .rightHeader .octicon-plus {
+      font-size: 15px; }
+    .top .rightHeader .octicon-triangle-down {
+      font-size: 12px; }
+
+.mainHeadShot {
+  height: 230px;
+  width: 230px;
+  border-radius: 8px;
+  margin-top: 20px; }
+
+.tablist {
+  margin-top: 20px; }
+
+.bottomLine {
+  border-top: 1px solid lightgrey; }
+
+.repoTabRight {
+  text-align: right;
+  padding-top: 33px;
+  padding-right: 30px; }
+
+.searchBar {
+  padding-bottom: 10px;
+  padding-top: 10px; }
+  .searchBar #middleSearch {
+    width: 380px;
+    height: 35px;
+    border-radius: 3px; }
+
+#dLabel {
+  height: 35px;
+  border-radius: 3px;
+  background: #F0F4F7; }
+
+#Language {
+  height: 35px;
+  border-radius: 3px;
+  background: #F0F4F7; }
