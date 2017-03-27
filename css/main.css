@@ -86,3 +86,7 @@
 .topLine {
   border-top: 1px solid lightgrey;
   padding-bottom: 15px; }
+
+.Bio {
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 10px; }

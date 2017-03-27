@@ -96,9 +96,9 @@ $.ajax({
     success: function(response) {
         $('.leftProfile').append(`
             <img  class="mainHeadShot" src="${response.avatar_url}" alt="">
-            <h2>${response.name}</h2>
+            <h2><b>${response.name}</b></h2>
             <h3>${response.login}</h3>
-            <h4>${response.bio}</h4>
+            <h4 class="Bio">${response.bio}</h4>
             <h5>${response.location}</h5>
               
             </div>  
