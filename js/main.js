@@ -69,18 +69,18 @@ $('#repositories').click(function(e) {
 $.ajax({
     url: "https://api.github.com/users/spmitchell10/events",
     success: function(response) {
-
-        response.forEach(function(events) {
-            $('#publicActivity').append(`
-            <div class="col-md-12 bottomLine">
-            <div class="col-md-6 eventsTabLeft">
-            <h6 class="updatedAt">${moment(events.created_at).from()}</h6>
-              <h4 class="charactername"><a href="${events.html_url}">${repo.name}</a></h4>
-              <h6 class="description">${events.payload.commits[0].author.name} + "pushed to" + ${events.payload.ref} + "regarding" ${events.payload.commits[0].message}</h6>
-              
+        response.forEach(function(aTab) {
+            if (aTab.type === "PushEvent") {
+                $('#publicActivity').append(`
+            <div class="col-md-12 topLine">
+            <div class="eventsTabLeft">
+            <h6>${moment(aTab.created_at).from()}</h6>
+            <img  class="activityPic" src="${aTab.actor.avatar_url}" alt="">
+            <h5 class="rightData">${aTab.payload.commits[0].author.name} pushed to ${aTab.payload.ref} regarding ${aTab.payload.commits[0].message}</h5> 
             </div>  
               </div>
           `);
+            }
         })
     }
 });
@@ -91,6 +91,21 @@ $('#publicActivity').click(function(e) {
 })
 
 
+$.ajax({
+    url: "https://api.github.com/users/spmitchell10",
+    success: function(response) {
+        $('.leftProfile').append(`
+            <img  class="mainHeadShot" src="${response.avatar_url}" alt="">
+            <h2>${response.name}</h2>
+            <h3>${response.login}</h3>
+            <h4>${response.bio}</h4>
+            <h5>${response.location}</h5>
+              
+            </div>  
+              </div>
+          `);
+    }
+});
 
-
-
+// <h6 class="updatedAt">${moment(events.created_at).from()}</h6>
+// <h4 class="charactername"><a href="${event.html_url}">${event.type}</a></h4>
